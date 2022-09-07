@@ -100,13 +100,68 @@
 // ----------Bài làm----------------
 
 function foo() {
-    let array = [];
-    return 
+   
 };
 function bar(){
-var a1 = [2, 4];
-var a2 = [6, 8, 10, 12];
-return foo();
+let a1 = [2, 4];
+let a2 = [6, 8, 10, 12];
 }
 console.log(bar().join('') === '281012');
 
+// ------------------- Bai 4-----------------------------
+function ajax(url, cb) { // fake ajax response:
+    cb({
+        foo: 2,
+        baz: [6, 8, 10], bam: {
+        qux: 12 
+    }
+    }); 
+}
+    function check(data) {
+         console.log(
+            56 === 
+            data.foo +
+            data.bar + 
+            data.baz[0] + 
+            data.baz[1] + 
+            data.baz[2] + 
+            data.bam.qux +
+            data.bam.qam
+         );
+    }
+    var defaults = {
+        foo: 0,
+        bar: 4,
+        bam: { 
+            qux: 0,
+            qam: 14 
+        }
+    }; 
+        // YOUR CODE HERE
+        // function response(...) { 
+        //     check(...); // true
+        //  }
+        // DO NOT MODIFY
+        ajax('http://fun.tld', response);
+// --------------------Bai 5------------------------------
+// function upper(strings, ...values) {}
+// let name = 'Nguyen Van A',
+//  account = 'ANV',
+//  classname = 'Fresher FrontEnd';
+// console.log(
+//     `Hello (@ ), welcome to the !!!` === 
+//     `Hello NGUYEN VAN A (@ANV), welcome to the FRESHER FRONTEND!!!`
+//     );
+// ----------- Bai lam-----------------
+// function upper(strings, ...values) {
+//   return strings.toUpperCase();
+// }
+// var name = "Nguyen Van A",
+//   account = "ANV",
+//   classname = "Fresher FrontEnd";
+// console.log(
+//   `Hello ${upper(name)} (@${upper(account)}), welcome to the ${upper(
+//     classname
+//   )}!!!` === "Hello NGUYEN VAN A (@ANV), welcome to the FRESHER FRONTEND!!!"
+// );
+ 
